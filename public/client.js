@@ -4,6 +4,7 @@ document.getElementById("delete-all-notes").addEventListener("click", async () =
     });
     const result = await response.json();
     console.log(result);
+    loadNotesOnScreen();
 });
 
 document.getElementById("create-notes").addEventListener("click", async () => {
@@ -16,7 +17,6 @@ document.getElementById("create-notes").addEventListener("click", async () => {
             favorite: false})
     }); 
     const result = await response.json();
-    //console.log(result);
     loadNotesOnScreen();
 });
 
@@ -28,6 +28,7 @@ document.getElementById("delete-singular-button").addEventListener("click", asyn
     });
     const result = await response.json();
     console.log(result);
+    loadNotesOnScreen();
 });
 
 let offsets = 0;

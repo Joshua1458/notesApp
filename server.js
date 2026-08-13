@@ -6,6 +6,7 @@ const session = require("express-session");
 
 const app = express();
 
+PORT = process.env.port || 3000;
 app.use(session({
     secret: process.env.SESSION_SECRET,
     resave: false,
@@ -17,6 +18,6 @@ app.use(express.static("public"));
 
 app.use("/notes", noteRoutes);
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
     console.log("Server is running on port 3000");
 });
