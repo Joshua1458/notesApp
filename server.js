@@ -6,7 +6,7 @@ const session = require("express-session");
 
 const app = express();
 
-PORT = process.env.port || 3000;
+PORT = process.env.PORT || 3000;
 app.use(session({
     secret: process.env.SESSION_SECRET,
     resave: false,
